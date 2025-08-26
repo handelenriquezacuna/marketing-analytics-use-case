@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Test</title>
+</head>
+<body>
+    <h1>JavaScript Function Test</h1>
+    <button onclick="testShowSection()">Test showSection</button>
+    <button onclick="testShowCalculation()">Test showCalculation</button>
+    <div id="result"></div>
+    
+    <script>
+        function testShowSection() {
+            try {
+                if (typeof parent.showSection === 'function') {
+                    document.getElementById('result').innerHTML = '✅ showSection is accessible';
+                } else {
+                    document.getElementById('result').innerHTML = '❌ showSection is not accessible';
+                }
+            } catch(e) {
+                document.getElementById('result').innerHTML = '❌ Error: ' + e.message;
+            }
+        }
+        
+        function testShowCalculation() {
+            try {
+                if (typeof parent.showCalculation === 'function') {
+                    document.getElementById('result').innerHTML = '✅ showCalculation is accessible';
+                } else {
+                    document.getElementById('result').innerHTML = '❌ showCalculation is not accessible';
+                }
+            } catch(e) {
+                document.getElementById('result').innerHTML = '❌ Error: ' + e.message;
+            }
+        }
+        
+        // Test direct access
+        window.onload = function() {
+            let status = '';
+            try {
+                // Try to access via iframe parent or direct
+                status += 'Window object: ' + typeof window + '<br>';
+                status += 'Parent object: ' + typeof parent + '<br>';
+            } catch(e) {
+                status += 'Error: ' + e.message + '<br>';
+            }
+            document.getElementById('result').innerHTML = status;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+{
+  "timestamp": "2025-08-26T14:30:27.787073",
+  "original_shape": [
+    1000,
+    14
+  ],
+  "original_columns": [
+    "Campaign ID",
+    "Campaign Name",
+    "Prospect Status",
+    "Account ID",
+    "Account Name",
+    "domain",
+    "Country",
+    "Prospect ID",
+    "Opt-In",
+    "Opt-In Source",
+    "Opt-In Timestamp",
+    "Opt-Out Timestamp",
+    "Job Title",
+    "Prospect Source"
+  ],
+  "cleaning_steps": [
+    {
+      "step": "Column Standardization",
+      "description": "Renamed columns to snake_case format for consistency",
+      "impact": {
+        "columns_renamed": 14,
+        "naming_convention": "snake_case"
+      },
+      "timestamp": "2025-08-26T14:30:27.791191"
+    },
+    {
+      "step": "Data Type Optimization",
+      "description": "Optimized data types for memory efficiency and performance",
+      "impact": {
+        "memory_before_mb": 0.78,
+        "memory_after_mb": 0.32,
+        "memory_savings_percent": 58.54,
+        "categorical_columns": 8
+      },
+      "timestamp": "2025-08-26T14:30:27.799316"
+    },
+    {
+      "step": "Categorical Standardization",
+      "description": "Standardized categorical variables to lowercase with underscores",
+      "impact": {
+        "prospect_status_standardized": 4,
+        "prospect_source_standardized": 4,
+        "missing_status_mappings": 0,
+        "missing_source_mappings": 0
+      },
+      "timestamp": "2025-08-26T14:30:27.803789"
+    },
+    {
+      "step": "Job Title Enhancement",
+      "description": "Created multi-dimensional job categorization system",
+      "impact": {
+        "unique_job_categories": 4,
+        "unique_seniority_levels": 7,
+        "unique_function_areas": 6,
+        "decision_makers_identified": 424
+      },
+      "timestamp": "2025-08-26T14:30:27.814699"
+    },
+    {
+      "step": "Temporal Feature Engineering",
+      "description": "Created comprehensive temporal features for time-series analysis",
+      "impact": {
+        "temporal_features_created": 15,
+        "date_range_start": "2023-01-20",
+        "date_range_end": "2025-09-27",
+        "business_hours_prospects": 0,
+        "weekend_prospects": 275
+      },
+      "timestamp": "2025-08-26T14:30:27.824918"
+    },
+    {
+      "step": "Data Validation",
+      "description": "Executed comprehensive data quality validation framework",
+      "impact": {
+        "overall_quality_score": 87.15,
+        "total_missing_values": 2627,
+        "data_type_compliance": true,
+        "temporal_consistency": "False"
+      },
+      "timestamp": "2025-08-26T14:30:27.832309"
+    },
+    {
+      "step": "Final Dataset Creation",
+      "description": "Created analysis-ready dataset with optimized structure",
+      "impact": {
+        "final_shape": "1,000 rows \u00d7 29 columns",
+        "final_completeness": "91.90%",
+        "memory_optimized_mb": 0.51,
+        "categorical_columns": 15
+      },
+      "timestamp": "2025-08-26T14:30:27.840272"
+    }
+  ],
+  "quality_metrics": {
+    "before": {
+      "total_missing_values": 1153,
+      "completeness_percentage": 91.76,
+      "duplicate_rows": 0
+    },
+    "after": {
+      "total_missing_values": 2350,
+      "completeness_percentage": 91.9,
+      "memory_usage_mb": 0.51,
+      "final_shape": [
+        1000,
+        29
+      ],
+      "final_columns": 29
+    }
+  }
+}

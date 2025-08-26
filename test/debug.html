@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Functions</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        button { margin: 5px; padding: 10px; }
+        .result { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Function Debug Test</h1>
+    
+    <h2>Test Navigation Functions</h2>
+    <button onclick="testShowSection()">Test showSection</button>
+    <button onclick="testUpdateAnalysis()">Test updateAnalysis</button>
+    <button onclick="testShowCalculation()">Test showCalculation</button>
+    
+    <h2>Test Direct Calls</h2>
+    <button onclick="showSection('overview')">Direct Call: showSection('overview')</button>
+    <button onclick="showCalculation('conversion')">Direct Call: showCalculation('conversion')</button>
+    
+    <div id="results" class="result"></div>
+    
+    <script>
+        // Test functions
+        function testShowSection() {
+            let result = '';
+            try {
+                result += 'showSection type: ' + typeof showSection + '<br>';
+                result += 'window.showSection type: ' + typeof window.showSection + '<br>';
+                if (typeof showSection === 'function') {
+                    result += '✅ showSection is accessible<br>';
+                } else {
+                    result += '❌ showSection is not accessible<br>';
+                }
+            } catch(e) {
+                result += '❌ Error testing showSection: ' + e.message + '<br>';
+            }
+            document.getElementById('results').innerHTML = result;
+        }
+        
+        function testUpdateAnalysis() {
+            let result = '';
+            try {
+                result += 'updateAnalysis type: ' + typeof updateAnalysis + '<br>';
+                result += 'window.updateAnalysis type: ' + typeof window.updateAnalysis + '<br>';
+                if (typeof updateAnalysis === 'function') {
+                    result += '✅ updateAnalysis is accessible<br>';
+                } else {
+                    result += '❌ updateAnalysis is not accessible<br>';
+                }
+            } catch(e) {
+                result += '❌ Error testing updateAnalysis: ' + e.message + '<br>';
+            }
+            document.getElementById('results').innerHTML = result;
+        }
+        
+        function testShowCalculation() {
+            let result = '';
+            try {
+                result += 'showCalculation type: ' + typeof showCalculation + '<br>';
+                result += 'window.showCalculation type: ' + typeof window.showCalculation + '<br>';
+                if (typeof showCalculation === 'function') {
+                    result += '✅ showCalculation is accessible<br>';
+                } else {
+                    result += '❌ showCalculation is not accessible<br>';
+                }
+            } catch(e) {
+                result += '❌ Error testing showCalculation: ' + e.message + '<br>';
+            }
+            document.getElementById('results').innerHTML = result;
+        }
+        
+        // Auto-test on load
+        window.onload = function() {
+            let result = 'Page loaded. Function availability check:<br><br>';
+            
+            const functions = ['showSection', 'showCalculation', 'updateAnalysis', 'resetFilters'];
+            functions.forEach(funcName => {
+                try {
+                    if (typeof window[funcName] === 'function') {
+                        result += '✅ ' + funcName + ' is available<br>';
+                    } else {
+                        result += '❌ ' + funcName + ' is not available (type: ' + typeof window[funcName] + ')<br>';
+                    }
+                } catch(e) {
+                    result += '❌ Error checking ' + funcName + ': ' + e.message + '<br>';
+                }
+            });
+            
+            document.getElementById('results').innerHTML = result;
+        };
+        
+        // Define a simple showSection for testing
+        window.showSection = function(sectionId) {
+            alert('showSection called with: ' + sectionId);
+        };
+        
+        window.showCalculation = function(type) {
+            alert('showCalculation called with: ' + type);
+        };
+    </script>
+</body>
+</html>

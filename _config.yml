@@ -1,0 +1,20 @@
+theme: jekyll-theme-minimal
+title: Marketing Analytics Portfolio
+description: Comprehensive data science portfolio showcasing advanced marketing funnel optimization and predictive analytics
+author: Handel Enriquez
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - .github/
+  - notebooks/
+  - data/
+  - requirements.txt
