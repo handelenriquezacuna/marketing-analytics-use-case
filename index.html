@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Analytics Case Study - Handel Enriquez</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -444,11 +446,11 @@
                             <div style="font-size: 0.9rem; opacity: 0.9;">Prospects Analyzed</div>
                         </div>
                         <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #007A7A, #004040); border-radius: 12px; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 8px;">$470K</div>
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 8px;">$1.8M</div>
                             <div style="font-size: 0.9rem; opacity: 0.9;">Revenue Opportunity</div>
                         </div>
                         <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #7F1734, #5a1025); border-radius: 12px; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 8px;">85%</div>
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 8px;">75-85%</div>
                             <div style="font-size: 0.9rem; opacity: 0.9;">Model Accuracy</div>
                         </div>
                         <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #4a5568, #2d3748); border-radius: 12px; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
@@ -635,7 +637,7 @@
         <div id="notebooks" class="content-section">
             <div class="card">
                 <h3>🔬 Advanced Analytics Notebooks</h3>
-                <p>Comprehensive Python-based analysis with 85%+ machine learning accuracy and statistical rigor</p>
+                <p>Comprehensive Python-based analysis with 75-85% machine learning accuracy and statistical rigor</p>
             </div>
 
             <div class="notebook-grid">
@@ -776,7 +778,7 @@
                 <div class="recommendation" onclick="showRecommendationDetail('phase1')" style="cursor: pointer; position: relative;">
                     <h4>Phase 1: Immediate Impact (0-30 days) - Expected 25% improvement 🔍</h4>
                     <ul style="margin-bottom: 0.5rem;">
-                        <li><strong>Deploy Lead Scoring Model:</strong> 85% accuracy ML model for prospect prioritization</li>
+                        <li><strong>Deploy Lead Scoring Model:</strong> 75-85% accuracy ML model for prospect prioritization</li>
                         <li><strong>Implement Demo Reminders:</strong> Automated 7-touch sequence to reduce no-shows</li>
                         <li><strong>Begin Budget Reallocation:</strong> Shift $50K from paid search to direct mail</li>
                         <li><strong>Dashboard Deployment:</strong> Real-time performance monitoring with alerts</li>
@@ -847,7 +849,7 @@
                             <li><strong>No-Show Rate:</strong> 66.2% → 45%</li>
                             <li><strong>Cost per Acquisition:</strong> $923 → $650</li>
                             <li><strong>Marketing ROI:</strong> 245% → 310%</li>
-                            <li><strong>Lead Quality Score:</strong> Baseline → 85% accuracy</li>
+                            <li><strong>Lead Quality Score:</strong> Baseline → 75-85% accuracy</li>
                         </ul>
                     </div>
                     <div>
@@ -907,7 +909,7 @@
                     <h4>Machine Learning Pipeline Design</h4>
                     <p><strong>Production ML Implementation:</strong></p>
                     <ul>
-                        <li><strong>Lead Scoring:</strong> Ensemble model (Random Forest + Gradient Boosting) with 85% accuracy</li>
+                        <li><strong>Lead Scoring:</strong> Ensemble model (Random Forest + Gradient Boosting) with 75-85% accuracy</li>
                         <li><strong>Customer Segmentation:</strong> K-means clustering with automated persona updates</li>
                         <li><strong>Attribution Modeling:</strong> Multi-touch attribution for campaign effectiveness measurement</li>
                         <li><strong>Churn Prediction:</strong> Identify at-risk prospects with proactive retention campaigns</li>
@@ -1792,7 +1794,10 @@
                     scales: { y: { beginAtZero: true } }
                 }
             });
+            
+            // Charts initialized successfully
         });
+        
         
         // Debug: Check if functions are properly registered
         console.log('Functions loaded:');
