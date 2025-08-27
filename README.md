@@ -210,9 +210,6 @@ The [`case_study_responses.md`](case_study_responses.md) document provides compr
 
 **Handel Enriquez**  
 *Data Engineer*  
-📧 Email: [your.email@domain.com]  
-💼 LinkedIn: [linkedin.com/in/yourusername]  
-🌐 Portfolio: [your-portfolio-website.com]  
 
 **Specialization**: Marketing Analytics, Predictive Modeling, Business Intelligence  
 **Objective**: Accenture Data Engineer Position - Demonstrating enterprise-level analytics capabilities
