@@ -119,10 +119,11 @@ python -m http.server 8000
 ```
 
 ### GitHub Pages Deployment
-1. Fork this repository to your GitHub account
-2. Enable GitHub Pages in repository settings
-3. Select "Deploy from a branch" → `gh-pages`
-4. GitHub Actions will automatically build and deploy on push to main
+1. Push your repository to GitHub
+2. Go to repository Settings → Pages
+3. Select "Deploy from a branch" → select `main` branch
+4. Your site will be available at: `https://yourusername.github.io/marketing-analytics-use-case/`
+5. GitHub Actions will automatically rebuild on every push to main branch
 
 ---
 

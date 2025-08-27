@@ -15,6 +15,12 @@ highlighter: rouge
 
 exclude:
   - .github/
+  - requirements.txt
+  - test/
+
+# Include important directories for GitHub Pages
+include:
   - notebooks/
   - data/
-  - requirements.txt
+  - website/
+  - resources/
